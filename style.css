@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p{
+    color: black;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+}
+/* MT Section */
+#mt{
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#mt::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: -1;
+}
+#mt .mt{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+#mt h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 1s ease forwards;
+}
+#mt h1:nth-child(1){
+    animation-delay: 1s;
+}
+#mt h1:nth-child(2){
+    animation-delay: 2s;
+}
+#mt h1:nth-child(3){
+    animation-delay: 3s;
+}
+#mt h1:nth-child(4){
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 4s;
+}
+#mt h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: tomato;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+}
+#mt h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+#mt h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+#mt h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+#mt h1:nth-child(4) span{
+    animation-delay: 3.5s;
+}
+#mt .btn{
+    display: inline-block;
+    padding: 10px 30px;
+    color: tomato;
+    background-color: transparent;
+    border: 2px solid tomato;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color;
+
+}
+#mt .btn:hover{
+    color: white;
+    background-color: tomato;
+}
+/* End of MT Section */
+
+/* Service Section */
+#services{
+
+}
+#services .services{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#services .section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#services .section-title span{
+    color: tomato;
+}
+#service .services-top p{
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+#service .services-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#services .services-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: linear-gradient(60deg, #ff7575 0%, #6bfaff 100%);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+}
+#services .services-item::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .8;
+    z-index: -1;
+}
+.services  .services-bottom .icon{
+    height: 50px;
+    width: 50px;
+    margin-bottom: 20px;
+}
+#services .services-item h2{
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+/* End of Service Section */
+
+/* keyframes */
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0%;
+        left: 100;
+    }
+}
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+@keyframes text_reveal_name{
+    100%{
+        color: tomato;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+}
+/* End keyframes */
+
