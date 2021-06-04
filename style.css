@@ -453,6 +453,10 @@ p {
     color: white;
 }
 
+#projects .project-info p a {
+    text-decoration: none;
+}
+
 #projects .project-img {
     flex-basis: 50%;
     height: 300px;
